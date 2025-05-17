@@ -18,6 +18,7 @@ class Payload(BaseModel):
     location: str
     contactos: List[Contacto]
 
+
 @app.post("/generar-docx")
 def generar_docx(data: Payload):
     doc = DocxTemplate("plantilla.docx")
